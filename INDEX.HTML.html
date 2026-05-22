@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yareny | Página Personal</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- LETRA BONITA -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        /* FONDO */
+        body{
+            font-family:'Poppins', sans-serif;
+            background:#dfe9ff;
+            color:#333;
+        }
+
+        /* MENU */
+        header{
+            text-align:center;
+            background:#cfdcff;
+            padding:25px;
+            box-shadow:0px 3px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1{
+            color:#5f7ea5;
+            font-size:45px;
+            margin-bottom:15px;
+        }
+
+        nav a{
+            text-decoration:none;
+            margin:15px;
+            color:#333;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#5f7ea5;
+        }
+
+        /* SECCION INICIO */
+        .inicio{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:60px 20px;
+        }
+
+        /* FOTO PRINCIPAL */
+        .foto img{
+            width:220px;
+            border-radius:25px;
+            margin-bottom:25px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+            transition:0.5s;
+        }
+
+        .foto img:hover{
+            transform:scale(1.05);
+        }
+
+        /* TEXTO */
+        .texto h2{
+            font-size:45px;
+            color:#5f7ea5;
+            margin-bottom:20px;
+        }
+
+        .texto p{
+            font-size:20px;
+            max-width:600px;
+            line-height:1.8;
+            margin:auto;
+        }
+
+        /* BOTON */
+        .boton{
+            display:inline-block;
+            margin-top:25px;
+            background:#7ea8db;
+            color:white;
+            text-decoration:none;
+            padding:15px 30px;
+            border-radius:15px;
+            transition:0.4s;
+        }
+
+        .boton:hover{
+            background:#5f7ea5;
+        }
+
+        /* SECCIONES */
+        section{
+            padding:60px 20px;
+        }
+
+        section h2{
+            text-align:center;
+            color:#5f7ea5;
+            font-size:40px;
+            margin-bottom:30px;
+        }
+
+        /* SOBRE MI */
+        .descripcion{
+            text-align:center;
+            font-size:20px;
+            margin-bottom:40px;
+        }
+
+        /* HOBBIES */
+        .hobbies{
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            width:170px;
+            padding:25px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+            transition:0.4s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card i{
+            font-size:40px;
+            color:#6b9bdb;
+            margin-bottom:10px;
+        }
+
+        /* GALERIA */
+        .imagenes{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+
+        .imagenes img{
+            width:220px;
+            height:280px;
+            object-fit:cover;
+            border-radius:15px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+            transition:0.5s;
+        }
+
+        .imagenes img:hover{
+            transform:scale(1.05);
+        }
+
+        /* VIDEO */
+        .video{
+            text-align:center;
+        }
+
+        video{
+            width:500px;
+            max-width:90%;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* AUDIO */
+        .audio{
+            text-align:center;
+        }
+
+        audio{
+            margin-top:20px;
+            width:350px;
+        }
+
+        /* CONTACTO */
+        .contacto{
+            text-align:center;
+            background:#cfdcff;
+            padding:50px;
+            border-radius:30px 30px 0px 0px;
+        }
+
+        .contacto p{
+            margin:20px;
+            font-size:22px;
+        }
+
+        .contacto a{
+            text-decoration:none;
+            color:#333;
+        }
+
+        .contacto a:hover{
+            color:#5f7ea5;
+        }
+
+        .whatsapp{
+            color:green;
+        }
+
+        /* BOTON SUBIR */
+        .subir img{
+            width:70px;
+            position:fixed;
+            bottom:20px;
+            right:20px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px){
+
+            .texto h2{
+                font-size:35px;
+            }
+
+            .texto p{
+                font-size:18px;
+            }
+
+            .foto img{
+                width:180px;
+            }
+
+            .imagenes img{
+                width:180px;
+                height:240px;
+            }
+
+        }
+/* TABLA */
+table{
+    width:80%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+
+th{
+    background:#7ea8db;
+    color:white;
+    padding:15px;
+}
+
+td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+}
+
+/* FORMULARIO */
+form{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+
+input, button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:20px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#7ea8db;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#5f7ea5;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+
+        <h1>Yareny 💙</h1>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+
+    <!-- INICIO -->
+    <section class="inicio" id="inicio">
+
+        <!-- FOTO -->
+        <div class="foto">
+
+            <img src="D:\imagenes yare\Diseño sin título.jpg"
+            alt="Foto Yareny">
+
+        </div>
+
+
+        <!-- TEXTO -->
+        <div class="texto">
+
+            <h2>Hola, soy Yareny ✨</h2>
+
+            <p>
+                Bienvenido(a) a mi página personal.
+                Aquí conocerás mis hobbies,
+                gustos, música favorita,
+                redes sociales y mucho más sobre mí 💙
+            </p>
+
+            <a class="boton" href="#contacto">
+                Contactarme
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SOBRE MI -->
+    <section id="sobre-mi" class="sobre-mi">
+
+        <h2>Sobre mí 💫</h2>
+
+        <p class="descripcion">
+
+            Me gusta jugar básquet, leer,
+            dibujar, jugar videojuegos
+            y salir al aire libre ✨
+
+        </p>
+
+
+        <!-- HOBBIES -->
+        <div class="hobbies">
+
+            <div class="card">
+                <i class="fa-solid fa-basketball"></i>
+                <h3>Básquet</h3>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-book"></i>
+                <h3>Leer</h3>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-pencil"></i>
+                <h3>Dibujar</h3>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-gamepad"></i>
+                <h3>Videojuegos</h3>
+            </div>
+
+
+            <div class="card">
+                <i class="fa-solid fa-tree"></i>
+                <h3>Aire libre</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- GALERIA -->
+    <section id="galeria" class="galeria">
+
+        <h2>Galería 📸</h2>
+
+        <div class="imagenes">
+
+            <img src="D:\imagenes yare\WhatsApp Image 2026-05-07 at 6.38.04 AM (1).jpeg">
+
+            <img src="D:\imagenes yare\SHISUKU2.jpg">
+
+            <img src="D:\imagenes yare\libros.jpg">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VIDEO -->
+    <section class="video">
+
+        <h2>Mi Video 🎥</h2>
+
+        <video controls>
+
+            <source src="D:\imagenes yare\WhatsApp Video 2026-05-07 at 6.55.48 AM.mp4"
+            type="video/mp4">
+
+        </video>
+
+    </section>
+
+
+
+    <!-- AUDIO -->
+    <<!-- AUDIO -->
+<section class="audio">
+
+    <h2>Mi Música Favorita 🎵</h2>
+
+    <audio controls>
+        <source src="D:\imagenes yare\Arctic Monkeys - Do I Wanna Know_ (Official Video).mp3"
+        type="audio/mp3">
+        Tu navegador no soporta audio.
+    </audio>
+
+</section
+<!-- TABLA -->
+<section class="tabla">
+
+    <h2>Mi horario escolar 📚</h2>
+
+    <table>
+        <tr>
+            <th>Hora</th>
+            <th>Materia</th>
+            <th>Día</th>
+        </tr>
+
+        <tr>
+            <td>07:01 - 07:50</td>
+            <td>Economía y Política Económica y Política Pública Mexicana</td>
+            <td>Lunes y Jueves</td>
+        </tr>
+
+        <tr>
+            <td>07:01 - 07:50</td>
+            <td>Taller de Pensamiento Variacional II</td>
+            <td>Martes</td>
+        </tr>
+
+        <tr>
+            <td>07:01 - 07:50</td>
+            <td>Organismos, Estructuras y Procesos: Herencia y Evolución Biológica</td>
+            <td>Miércoles</td>
+        </tr>
+
+        <tr>
+            <td>07:01 - 07:50</td>
+            <td>Páginas Web II</td>
+            <td>Viernes</td>
+        </tr>
+
+        <tr>
+            <td>07:51 - 08:40</td>
+            <td>Diseño Digital</td>
+            <td>Martes y Jueves</td>
+        </tr>
+
+        <tr>
+            <td>07:51 - 08:40</td>
+            <td>Educación para la Salud II</td>
+            <td>Lunes y Miércoles</td>
+        </tr>
+
+        <tr>
+            <td>08:41 - 09:30</td>
+            <td>Temas Selectos de Matemáticas II</td>
+            <td>Martes y Viernes</td>
+        </tr>
+
+        <tr>
+            <td>08:41 - 09:30</td>
+            <td>Análisis de Fenómenos Físicos II</td>
+            <td>Miércoles</td>
+        </tr>
+
+        <tr>
+            <td>09:31 - 10:20</td>
+            <td>Páginas Web II</td>
+            <td>Jueves</td>
+        </tr>
+
+        <tr>
+            <td>10:21 - 10:50</td>
+            <td>RECESO</td>
+            <td>Todos los días</td>
+        </tr>
+
+        <tr>
+            <td>10:51 - 11:40</td>
+            <td>Diseño Digital / Biología / Matemáticas</td>
+            <td>Según el día</td>
+        </tr>
+
+        <tr>
+            <td>11:41 - 12:30</td>
+            <td>Educación para la Salud / Conciencia Histórica III</td>
+            <td>Según el día</td>
+        </tr>
+
+    </table>
+
+</section>
+<!-- FORMULARIO -->
+<section class="formulario">
+
+    <h2>Formulario 💌</h2>
+
+    <form>
+
+        <label>Nombre:</label>
+        <input type="text" placeholder="Escribe tu nombre" required>
+
+        <label>Fecha:</label>
+        <input type="date">
+
+        <label>¿Te gustó mi página?</label><br><br>
+
+        <input type="radio" name="opinion"> Sí
+        <input type="radio" name="opinion"> Mucho
+
+        <br><br>
+
+        <label>¿Qué te gusta?</label><br><br>
+
+        <input type="checkbox"> Fotos
+        <input type="checkbox"> Música
+        <input type="checkbox"> Diseño
+
+        <br><br>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+</section>
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+
+</section>
+
+        <h2>Contacto 💌</h2>
+
+        <!-- CORREO -->
+        <p>
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <a href="mailto:yaresam120@gmail.com">
+
+                yaresam120@gmail.com
+
+            </a>
+
+        </p>
+
+
+
+        <!-- TELEFONO -->
+        <p>
+
+            <i class="fa-solid fa-phone"></i>
+
+            <a href="tel:2461161132">
+
+                2461161132
+
+            </a>
+
+        </p>
+
+
+
+        <!-- WHATSAPP -->
+        <p>
+
+            <i class="fa-brands fa-whatsapp whatsapp"></i>
+
+            <a target="_blank"
+            href="https://wa.me/522461161132">
+
+                Enviarme WhatsApp 💚
+
+            </a>
+
+        </p>
+
+
+
+        <!-- INSTAGRAM -->
+        <p>
+
+            <i class="fa-brands fa-instagram"></i>
+
+            <a target="_blank"
+            href="https://instagram.com/yare_bsm">
+
+                @yare_bsm
+
+            </a>
+
+        </p>
+
+
+
+        <!-- FACEBOOK -->
+        <p>
+
+            <i class="fa-brands fa-facebook"></i>
+
+            <a target="_blank"
+href="https://www.facebook.com/profile.php?id=100074399144858">
+
+    Mi Facebook 💙
+
+</a>
+
+        </p>
+
+    </section>
+
+
+
+    <!-- BOTON SUBIR -->
+    <a href="#inicio" class="subir">
+
+        <img src="imagenes/flecha.gif" alt="Subir">
+
+    </a>
+
+</body>
+
+</html>
